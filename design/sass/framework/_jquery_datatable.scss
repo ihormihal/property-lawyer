@@ -1,0 +1,64 @@
+/**** JQUERY DATATABLES STYLING ****/
+.datatable {
+	margin: 16*$pt 0;
+	thead tr {
+		border-bottom: 1px solid color(light);
+		th {
+			&:after {
+				content: '';
+			    display: table-cell;
+			    vertical-align: middle;
+			    font-family: FontAwesome;
+			    text-rendering: auto;
+			    -webkit-font-smoothing: antialiased;
+			    position: absolute;
+				right: 0;
+				top: 50%;
+				margin-top: -6*$pt;
+			}
+			&.sorting_asc:after {
+				content: "\f107";
+			}
+			&.sorting_desc:after {
+				content: "\f106";
+			}
+			color: color(grey);
+			cursor: default;
+			&:hover {
+				color: color(dark-grey);
+			}
+		}
+	}
+}
+.dataTables_wrapper {
+	.dataTables_length select {
+		width: 120px;
+	}
+	.dataTables_paginate {
+		a, span.ellipsis {
+			display: block;
+			float: left;
+			width: 32*$pt;
+			height: 32*$pt;
+			line-height: 32*$pt;
+			text-align: center;
+			color: color(grey);
+			cursor: pointer;
+			border: 1px solid transparent;
+			@include border-radius(50px);
+			&.current {
+				color: color(deep-orange);
+				border-color: color(deep-orange);
+			}
+		}
+		&:after {
+			display: block;
+			content: '';
+			clear: both;
+		}
+	}
+	label {
+		padding: 0;
+		margin: 0;
+	}
+}

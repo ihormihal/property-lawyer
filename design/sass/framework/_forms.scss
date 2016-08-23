@@ -1,0 +1,329 @@
+.form-group {
+	margin-bottom: 16*$pt;
+	.help-block {
+		display: block;
+		padding: 8*$pt 0;
+		&.error-msg {
+			color: color(orange);
+		}
+	}
+	&.has-error {
+		select, input[type=text], input[type=email], input[type=password], textarea {
+			border-color: color(orange);
+		}
+	}
+	&.form-group-row {
+		margin-top: 32*$pt;
+	}
+	&.form-btn-row {
+		margin-top: 5*$pt;
+	}
+	&.floating-label {
+		label {
+			position: relative;
+			z-index: -1;
+			top: 32*$pt;
+			font-weight: 400;
+			color: color(light-grey);
+			@include transition(top 0.25s ease);
+		}
+		&.focus {
+			label {
+				color: inherit;
+				font-weight: 600;
+				top: 0;
+			}
+		}
+	}
+}
+
+label {font-size: 14*$pt; padding: 10*$pt 0; margin-right: 16*$pt; display: inline-block; font-weight: 500;}
+
+select, .select, input[type=text], input[type=email], input[type=password], input[type=date], textarea {
+	border: none;
+	border: 1px solid color(light);
+	height: 32*$pt;
+	line-height: 1; /* safari fix */
+	vertical-align: middle;
+	font-size: 14*$pt;
+	padding: $gap;
+	outline: none;
+	background-color: #fff;
+	@include border-radius(5px);
+	@include transition(border-color 0.25s ease);
+	@include input-placeholder {
+		color: color(light-grey);
+		text-overflow: ellipsis;
+		font-family: $roboto;
+	}
+	&:focus, &.focus {
+		border-color: color(grey);
+	}
+	&.black {
+		border-color: color(black);
+	}
+	&.default {
+		border-width: 1px;
+		padding-left: 8*$pt;
+		padding-right: 8*$pt;
+	}
+	+ .under {
+		display: block;
+		position: relative;
+		margin: 0 auto;
+		width: 0%;
+		height: 2px;
+		top: -2px;
+		background-color: color(teal);
+		@include transition(width 0.25s ease);
+	}
+	&:focus + .under {
+		width: 100%;
+	}
+}
+select, .select {
+	background-image: url(../img/ico-select.svg);
+	background-position: right center;
+	background-repeat: no-repeat;
+	padding-right: 32*$pt;
+	cursor: pointer;
+	@include transition(background-position 0.25s ease);
+
+	//for Chrome
+	-webkit-appearance: none;
+	//for FF
+	-moz-appearance: none;
+	text-indent: 0.01px;
+	text-overflow: '';
+	//for IE
+	-ms-appearance: none;
+	appearance: none!important;
+
+	&.empty {
+		color: color(light-grey);
+	}
+	&:focus, &.focus {
+		background-position: right -32px;
+	}
+	&::-ms-expand {
+		display: none;
+	}
+	option[disabled] {
+		color: color(grey);
+	}
+}
+input[type=file]{
+	//for Chrome
+	-webkit-appearance: none;
+	//for FF
+	-moz-appearance: none;
+	text-indent: 0.01px;
+	text-overflow: '';
+	//for IE
+	-ms-appearance: none;
+	appearance: none!important;
+}
+
+textarea {
+	height: auto;
+	resize: vertical;
+	line-height: 22*$pt;
+	&.default {
+		padding-top: 8*$pt;
+		padding-bottom: 8*$pt;
+	}
+}
+input[disabled] {
+	color: color(grey);
+	background-color: transparent;
+	border-style: dotted;
+	cursor: not-allowed;
+}
+
+/**** checkbox ****/
+.checkbox input {
+	display:none;
+	& + label {
+		padding: 8*$pt 0;
+		@include no-select();
+		&:before {
+			content: "";
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			vertical-align: middle;
+			margin-right: 16*$pt;
+			background-color: color(light);
+			@include transition(background-color 0.25s ease);
+		}
+	}
+	&:checked + label:before {
+		font-family: FontAwesome;
+		content: "\f00c";
+		color: #fff;
+		background-color: color(dark);
+		text-align: center;
+		line-height: 20px;
+	}
+}
+
+.checkbox.rounded {
+	input + label:before {
+		@include border-radius(3px);
+	}
+}
+.checkbox.circle {
+	input + label:before {
+		@include border-radius(50%);
+	}
+}
+/* switch style */
+.switch input {
+	display:none;
+	& + label {
+		cursor: pointer;
+		padding: 8*$pt 0;
+		@include no-select();
+		&:before {
+			font-family: FontAwesome;
+			content: "\f111";
+			display: inline-block;
+			width: 40px;
+			height: 20px;
+			line-height: 20px;
+			font-size: 20px;
+			vertical-align: middle;
+			text-align: left;
+			margin-right: 16*$pt;
+			background-color: color(light);
+			color: #fff;
+			padding: 0 1px;
+			@include border-radius(20px);
+			@include transition(background-color 0.25s ease);
+		}
+	}
+	&:checked + label:before {
+		font-family: FontAwesome;
+		content: "\f111";
+		text-align: right;
+		background-color: color(dark);
+		line-height: 20px;
+	}
+	&:disabled + label:before {
+		cursor: default;
+		cursor: not-allowed;
+		@include opacity(0.5);
+	}
+}
+
+/**** radio ****/
+.radio {
+	display: inline-block;
+}
+.radio input {
+	display:none;
+	& + label {
+		padding: 8*$pt 0;
+		@include no-select();
+		&:before {
+			content: "";
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			vertical-align: middle;
+			margin-right: 16*$pt;
+			background-color: color(light);
+			background-size: 0;
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			@include border-radius(50%);
+			@include transition(background-color 0.25s ease, background-size 0.25s ease);
+			background-color: color(white);
+			border: 2px solid color(light);
+		}
+	}
+	&:checked + label:before {
+		font-family: FontAwesome;
+		content: "";
+		color: white;
+		background-color: color(dark);
+		background-image: url(../img/circle.svg);
+		background-size: 100%;
+		font-size: 9px;
+		text-align:center;
+		line-height: 20px;
+		background-color: color(white);
+	}
+}
+
+@each $colorName, $color in $colors {
+	/*color*/
+	.checked-#{$colorName} {
+		input:checked + label:before {
+			background-color: #{$color};
+		}
+	}
+}
+
+.input-icon {
+	position: relative;
+	input[type=text], input[type=email], input[type=password] {
+		padding-right: 16*$pt;
+	}
+	i {
+		color: color(light);
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 16*$pt;
+		line-height: 32*$pt;
+		text-align: center;
+		display: block;
+	}
+	&.default {
+		.default {
+			padding-right: 24*$pt;
+		}
+		i {
+			width: 24*$pt;
+		}
+	}
+}
+
+.fileinput {
+	position: relative;
+	display: inline-block;
+	input[type=file] {
+		background-color: #ccc;
+		position: absolute;
+		z-index: 100;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		@include opacity(0);
+		&:focus {
+			+ input[type=text] {
+				border-color: color(grey);
+			}
+		}
+	}
+	input[type=text] {
+		width: 100%;
+		position: relative;
+		z-index: 1;
+	}
+	&:after {
+		content: "\f0c6";
+		font-family: FontAwesome;
+		font-size: inherit;
+		display: block;
+		color: color(light);
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 16*$pt;
+		line-height: 32*$pt;
+		text-align: center;
+	}
+}

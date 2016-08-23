@@ -1,0 +1,327 @@
+.border, .border-top, .border-bottom, .border-left, .border-right {border-color: color(light); border-style: solid;}
+//COLOR CLASSES
+@each $colorName, $color in $colors {
+	/*color*/
+	.#{$colorName} {
+		color: #{$color};
+	}
+	/*hover color*/
+	.hover-#{$colorName}:hover {
+		color: #{$color};
+	}
+	/*background color*/
+	.#{$colorName}-bg {
+		background-color: #{$color};
+		&.hover-bg-darken:hover {
+			background-color: darken($color, 10%);
+		}
+		&.hover-bg-lighten:hover {
+			background-color: lighten($color, 10%);
+		}
+		@if (lightness($color) > 60) {
+			color: color(dark);
+		} @else {
+			color: color(white);
+		}
+	}
+	/*hover background color*/
+	.hover-#{$colorName}-bg:hover {
+		background-color: #{$color};
+		@if (lightness($color) > 60) {
+			color: color(dark);
+		} @else {
+			color: color(white);
+		}
+	}
+	.#{$colorName}-border {
+		border-color: #{$color};
+	}
+}
+
+body.fixed-footer {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	main {
+		flex: 1 0 auto;
+	}
+}
+
+//BORDER-RADIUS CLASSES
+@for $i from 1 through 10 {
+	.rounded-#{$i} {
+		overflow: hidden;
+		@include border-radius(#{$i}px);
+	}
+}
+.border {border-width: 1px;}
+.border-top {border-width: 1px 0 0 0;}
+.border-right {border-width: 0 1px 0 0;}
+.border-bottom {border-width: 0 0 1px 0;}
+.border-left {border-width: 0 0 0 1px;}
+
+//SHADOW CLASSES
+.shadow-1-hover, .shadow-2-hover, .shadow-3-hover, .shadow-4-hover, .shadow-5-hover {
+	@include transition(box-shadow 0.25s ease);
+}
+.shadow-1, .shadow-1-hover:hover {
+	@include box-shadow(0px 0px 3px rgba(0,0,0,0.1));
+}
+.shadow-2, .shadow-2-hover:hover {
+	//@include box-shadow(0 1px 3px 1px rgba(0, 0, 0, 0.25));
+	@include box-shadow(0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12));
+}
+.shadow-3, .shadow-3-hover:hover {
+	//@include box-shadow(0 3px 7px 1px rgba(0, 0, 0, 0.3));
+	@include box-shadow(0 3px 8px 0 rgba(0,0,0,.2), 0 2px 10px 0 rgba(0,0,0,.19));
+}
+.shadow-4, .shadow-4-hover:hover {
+	//@include box-shadow(1px 2px 8px rgba(0,0,0,0.4));
+	@include box-shadow(0 4px 10px 0 rgba(0,0,0,.2),0 3px 12px 0 rgba(0,0,0,.19));
+}
+.shadow-5, .shadow-5-hover:hover {
+	@include box-shadow(3px 5px 15px rgba(0,0,0,0.5));
+}
+
+.shadow-inset {
+	position: relative;
+	overflow: hidden;
+	&:before, &:after {
+		content: '';
+		display: block;
+		position: absolute;
+		height: 4px;
+		width: 100%;
+		left: 0;
+		right: 0;
+		z-index: 100;
+	}
+	&:before {
+		top: 0;
+		@include background-image(linear-gradient(rgba(0,0,0,0.25), transparent));
+	}
+	&:after {
+		bottom: 0;
+		@include background-image(linear-gradient(transparent, rgba(0,0,0,0.25)));
+	}
+	&-top {
+		&:after {display: none;}
+	}
+	&-bottom {
+		&:before {display: none;}
+	}
+}
+
+a {
+	color: color(orange);
+	text-decoration: none;
+}
+p {
+	color: color(grey);
+}
+ul {
+	text-align: left;
+}
+
+//POSITION CLASSES
+.fixed, .absolute {
+	&.fill {
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	&.top-left {top: 0; left: 0;}
+	&.top-right {top: 0; right: 0;}
+	&.bottom-left {bottom: 0; left: 0;}
+	&.bottom-right {bottom: 0; right: 0;}
+	&.z0 {z-index: 0;}
+	&.z1 {z-index: 1;}
+	&.z100 {z-index: 100;}
+	&.z1000 {z-index: 1000;}
+	&.z9999 {z-index: 9999;}
+}
+.fixed {position: fixed;}
+.absolute {position: absolute;}
+.relative {position: relative;}
+.hidden {display: none;}
+
+header {
+	&.fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 9000;
+	}
+}
+.cover {
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.background {
+	background-repeat: no-repeat;
+	&.bg-right {
+		background-position: right center;
+	}
+	&.bg-left {
+		background-position: left center;
+	}
+}
+
+.block {display: block;}
+.div {
+	display: block;
+	width: 100%;
+	&:after {
+		display: block;
+		content: '';
+		clear: both;
+	}
+}
+.circle {
+	display: inline-block;
+	@include border-radius(50%);
+	&.circle-sm {
+
+	}
+	&.circle-md {
+		height: 54px;
+		width: 54px;
+		line-height: 54px;
+		text-align: center;
+		font-size: 24px;
+	}
+	&.icon {
+		height: 72px;
+		width: 72px;
+		line-height: 72px;
+		vertical-align: middle;
+		text-align: center;
+		font-size: 32px;
+	}
+}
+
+.inline-block {display: inline-block;}
+.full {width: 100%;}
+
+/*************************************/
+.flex-valign {
+	@include flexbox();
+	flex-direction: row;
+	align-items: center;
+}
+.flex-valign-end {
+	@include flexbox();
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+}
+.flex-middle {
+	@include flexbox();
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.flex-bottom {
+	@include flexbox();
+	flex-direction: row;
+	align-items: flex-end;
+}
+// .order-one {
+// 	order: 1;
+// }
+// .rder-two {
+// 	order: 2;
+// }
+// .order-three {
+// 	order: 3;
+// }
+// .order-four {
+// 	order: 4;
+// }
+/*************************************/
+.image {
+	width: 100%;
+	text-align: center;
+	overflow: hidden;
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+	&.hover-scale {
+		img {
+			@include transform(scale(1));
+			@include transition(transform 2s ease);
+		}
+		&:hover img {
+			@include transform(scale(1.2));
+		}
+	}
+	&.circle {
+		img {
+			@include border-radius(50%);
+		}
+	}
+}
+ul.list, ol.list {
+	list-style: none;
+	padding-left: 0;
+	li {
+		padding-bottom: 16*$pt;
+		font-size: 16*$pt;
+	}
+}
+
+.collection {
+	list-style: none;
+	padding-left: 0;
+	li {
+		float: none !important;
+		padding: 12*$pt;
+		border-bottom: 1px solid color(light);
+		font-size: 12*$pt;
+		&:last-child {
+			border: none;
+		}
+	}
+}
+
+.label {
+	padding: 3px 5px;
+	color: color(white);
+	display: inline-block;
+    margin: 1px 0;
+	@include border-radius(3px);
+}
+
+.popup {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	background-color: color(white);
+	min-width: 300px;
+	width: 35%;
+	.box {
+		padding: 16*$pt 24*$pt;
+	}
+	.head {
+		&, p {
+			margin: 0;
+			line-height: 40*$pt;
+		}
+		border-bottom: 1px solid color(lighten);
+	}
+	@media only screen and (max-width: #{$lg - 1}px){
+		width: 50%;
+	}
+	@media only screen and (max-width: #{$md - 1}px){
+		width: 66%;
+	}
+	@media only screen and (max-width: #{$sm - 1}px){
+		width: 96%;
+	}
+}

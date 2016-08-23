@@ -1,0 +1,23 @@
+footer {
+	.copyright {
+		padding: 8px 0;
+		font-weight: 600;
+	}
+
+	.bottom-nav {
+		padding: 8px 0;
+		.nav-inline {
+			li {
+				a {
+					color: color(black);
+					padding: 0 8px;
+					line-height: 16px;
+				}
+				border-left: 1px solid color(black);
+				&:first-child {
+					border-left: none;
+				}
+			}
+		}
+	}
+}

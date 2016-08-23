@@ -1,0 +1,51 @@
+body {
+	font-family: $helveticaRoman;
+	font-size: 14px;
+}
+p {margin-bottom: 16px; line-height: 1.25em; font-size: 14px;}
+
+.huge, h1,h2,h3,h4,.h1,.h2,.h3,.h4 {font-family: $helveticaBold; font-weight: 600;}
+h2,h3,h4,.h2,.h3,.h4 {font-weight: 600}
+
+.huge  {font-size: 80px;}
+h1,.h1 {font-size: 30px;}
+h2,.h2 {font-size: 20px;}
+h3,.h3 {font-size: 18px;}
+
+h4,.h4 {font-size: 16px;}
+h5,.h5 {font-size: 16px;}
+h6,.h6 {font-size: 14px;}
+.small {font-size: 12px;}
+
+.huge	{line-height: 80px;}
+h1,.h1 	{line-height: 40px;}
+h2,.h2	{line-height: 32px;}
+h3,.h3	{line-height: 24px;}
+
+h4,.h4	{line-height: 24px;}
+h5,.h5	{line-height: 16px;}
+h6,.h6	{line-height: 16px;}
+
+.line {margin: 0;}
+.lhuge	{line-height: 80px;}
+.lh1 	{line-height: 64px;}
+.lh2	{line-height: 32px;}
+.lh3	{line-height: 24px;}
+.lh4	{line-height: 20px;}
+.lh5	{line-height: 16px;}
+.lh6	{line-height: 16px;}
+.lh-btn {line-height: 42px;}
+
+.slim {font-weight: 100;}
+p,h1,h2,h3,h4,h5,span {
+	&.thin {font-weight: 100;}
+}
+
+.normal {font-weight: 400;}
+.bold {font-weight: 600;}
+.italic {font-style: italic;}
+.link {text-decoration: none;}
+.up {text-transform: uppercase;}
+.underline {text-decoration: underline;}
+.valign {vertical-align: middle;}
+.nowrap {white-space: nowrap;}

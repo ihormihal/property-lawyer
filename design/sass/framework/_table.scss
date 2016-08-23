@@ -1,0 +1,194 @@
+table {
+	td,th {
+		padding: 8*$pt;
+		border: 1px solid color(light);
+	}
+	thead {
+		tr {
+			text-align: left;
+		}
+	}
+	tbody {
+		tr {
+			@include transition(background-color 0.25s ease);
+		}
+	}
+	&.clickable tbody tr, tbody tr.clickable {
+		cursor: pointer;
+	}
+	&.list {
+		width: 100%;
+		tr {
+			td {
+				padding: 0;
+				border: none;
+				font-size: 16*$pt;
+				padding-bottom: 16*$pt;
+				&:first-child {
+					padding-right: 16*$pt;
+				}
+				&:last-child {
+					text-align: right;
+					padding-left: 16*$pt;
+				}
+			}
+		}
+	}
+	&.striped {
+		tbody tr:nth-child(even){
+			background-color: color(lighten);
+		}
+	}
+	tbody tr.selected {
+		background-color: color(amber) !important;
+	}
+	&.hoverable {
+		tbody tr:hover {
+			background-color: color(amber);
+		}
+	}
+	&.noborder {
+		td,th {
+			border: none;
+		}
+	}
+	&.nopadding {
+		th, td {padding: 0;}
+	}
+
+	&.datatable {
+		@extend .noborder;
+		@extend .striped;
+		@extend .hoverable;
+		width: 100%;
+	}
+}
+
+.table-responsive {
+	overflow-x: auto;
+}
+
+/**** AngularJS IM-DATATABLE STYLING ****/
+.ng-table, .datatable {
+	thead tr {
+		border-bottom: 1px solid color(light);
+		th {
+			vertical-align: middle;
+		}
+	}
+}
+div[im-datatable] {
+	tbody {
+		display: none;
+		&.loaded {
+			display: table-row-group; //IE8+
+		}
+	}
+	table {
+		margin: 16*$pt 0;
+		thead tr {
+			th {
+				@include no-select();
+				position: relative;
+				&:after, &:before {
+					content: '';
+					display: table-cell;
+					vertical-align: middle;
+					font-family: FontAwesome;
+					text-rendering: auto;
+					-webkit-font-smoothing: antialiased;
+					position: absolute;
+					right: 0;
+					top: 50%;
+					margin-top: -6*$pt;
+				}
+
+				&[data-sortby] {
+					&:before {
+						margin-top: -2*$pt;
+						content: "\f107";
+						color: color(light);
+					}
+					&:after {
+						margin-top: -10*$pt;
+						content: "\f106";
+						color: color(light);
+					}
+				}
+
+				&[data-sortdir] {
+					&:before {content: '';}
+					&:after {
+						margin-top: -6*$pt;
+						color: color(dark-grey);
+					}
+				}
+
+				&[data-sortdir="ASC"]:after {
+					content: "\f107";
+				}
+				&[data-sortdir="DESC"]:after {
+					content: "\f106";
+				}
+				color: color(grey);
+				cursor: default;
+				&:hover {
+					color: color(dark-grey);
+				}
+			}
+		}
+		tbody tr {
+			&.success {
+				background-color: color(light-green) !important;
+			}
+			&.error {
+				background-color: color(amber) !important;
+			}
+		}
+	}
+}
+
+
+.pagination {
+	list-style: none;
+	li {
+		a {
+			@include no-select();
+			display: block;
+			float: left;
+			width: 32*$pt;
+			height: 32*$pt;
+			line-height: 32*$pt;
+			text-align: center;
+			color: color(grey);
+			cursor: pointer;
+			border: 1px solid transparent;
+			@include border-radius(50px);
+		}
+		&.active a {
+			color: color(deep-orange);
+			border-color: color(deep-orange);
+		}
+	}
+}
+
+//MOBILE RESPONSIVE TABLE
+@media screen and (max-width: 480px) {
+  .table-mobile {
+    thead {
+      display: none;
+    }
+    tbody {
+      td {
+        display: block;
+        &:before {
+          content: attr(data-th)": ";
+          display: inline-block;
+          width: 9em;
+          font-weight: bold;
+        }
+        
+      }
+    }
+  }
+}

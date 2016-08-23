@@ -1,0 +1,14 @@
+.breadcrumbs {
+	list-style: none;
+	li {
+		display: inline-block;
+		a {text-decoration: none; color: inherit;}
+		&:after {
+			display: inline-block;
+			content: "\f105";
+			font-family: FontAwesome;
+			margin: 0 7px;
+		}
+		&:last-child:after {display: none;}
+	}
+}

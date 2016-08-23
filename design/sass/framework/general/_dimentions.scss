@@ -1,0 +1,40 @@
+.box {
+	padding: $gap;
+}
+
+.mt05 {margin-top: 0.5*$gap;}
+.mb05 {margin-bottom: 0.5*$gap;}
+.pt05 {padding-top: 0.5*$gap;}
+.pb05 {padding-bottom: 0.5*$gap;}
+@for $i from 1 through 10 {
+	.m#{$i} {
+		margin: $gap*$i;
+	}
+	.mt#{$i} {
+		margin-top: $gap*$i;
+	}
+	.mb#{$i} {
+		margin-bottom: $gap*$i;
+	}
+	.ml#{$i} {
+		margin-left: $gap*$i;
+	}
+	.mr#{$i} {
+		margin-right: $gap*$i;
+	}
+	.p#{$i} {
+		padding: $gap*$i;
+	}
+	.pl#{$i} {
+		padding-left: $gap*$i;
+	}
+	.pr#{$i} {
+		padding-right: $gap*$i;
+	}
+	.pt#{$i} {
+		padding-top: $gap*$i;
+	}
+	.pb#{$i} {
+		padding-bottom: $gap*$i;
+	}
+}

@@ -1,0 +1,58 @@
+body {
+	font-family: $roboto;
+	font-size: 12*$pt;
+}
+p {margin-bottom: 16*$pt; line-height: 24*$pt; font-size: 14*$pt;}
+
+.huge, h1,h2,h3,h4,.h1,.h2,.h3,.h4 {font-family: $roboto; font-weight: 100;}
+h2,h3,h4,.h2,.h3,.h4 {font-weight: 300}
+
+.huge  {font-size: 80*$pt;}
+// h1,.h1 {font-size: 56*$pt;}
+// h2,.h2 {font-size: 32*$pt;}
+// h3,.h3 {font-size: 24*$pt;}
+// h4,.h4 {font-size: 20*$pt;}
+// h5,.h5 {font-size: 16*$pt;}
+// h6,.h6 {font-size: 14*$pt;}
+
+.huge	{line-height: 80*$pt;}
+// h1,.h1 	{line-height: 64*$pt;}
+// h2,.h2	{line-height: 32*$pt;}
+// h3,.h3	{line-height: 24*$pt;}
+// h4,.h4	{line-height: 20*$pt;}
+// h5,.h5	{line-height: 16*$pt;}
+// h6,.h6	{line-height: 16*$pt;}
+
+.lhuge	{line-height: 80*$pt;}
+// .lh1 	{line-height: 64*$pt;}
+// .lh2	{line-height: 32*$pt;}
+// .lh3	{line-height: 24*$pt;}
+// .lh4	{line-height: 20*$pt;}
+// .lh5	{line-height: 16*$pt;}
+// .lh6	{line-height: 16*$pt;}
+.lh-btn {line-height: 42*$pt;}
+
+$text_dim: 1px;
+@for $i from 1 through 6 {
+	h#{$i}, .h#{$i} {
+		font-size: 60/$i*$text_dim + 4px;
+		line-height: 60/$i*$text_dim + 8px;
+	}
+	.lh#{$i} {
+		line-height: 60/$i*$text_dim + 8px;
+	}
+}
+
+.slim {font-weight: 100;}
+p,h1,h2,h3,h4,h5,span {
+	&.thin {font-weight: 100;}
+}
+
+.normal {font-weight: 400;}
+.bold {font-weight: 600;}
+.italic {font-style: italic;}
+.link {text-decoration: none;}
+.up {text-transform: uppercase;}
+.underline {text-decoration: underline;}
+.valign {vertical-align: middle;}
+.nowrap {white-space: nowrap;}

@@ -1,0 +1,60 @@
+.results {
+	.result {
+		border: 1px solid color(lighten);
+		padding: $gap;
+		height: 100%;
+		&.loading {
+			@include opacity(0.4);
+		}
+		&.ignore {
+			background-color: #ffa9a3;
+		}
+		a {
+			text-decoration: none;
+			color: color(dark);
+		}
+		.reason {color: #fff;}
+		.preview {
+			color: color(blue);
+			background-color: color(bright);
+			&:hover {
+				background-color: color(lighten);
+			}
+		}
+		.title {
+			font-size: 16px;
+			margin-bottom: $gap;
+		}
+		.phones {
+			.phone {
+				a {color: color(dark);}
+				background-color: color(bright);
+				&:hover {
+					background-color: color(lighten);
+				}
+				margin-bottom: 0.5*$gap;
+			}
+		}
+	}
+}
+#preview {
+	.content {
+		padding: $gap;
+		width: 480px;
+		@media screen and (max-width: #{$sm - 1}px) {
+			width: auto;
+		}
+		.title {
+			font-size: 18px;
+			margin-bottom: $gap;
+		}
+		.phones {
+			a {
+				background-color: color(bright);
+				&:hover {
+					background-color: color(lighten);
+				}
+			}
+		}
+	}
+}

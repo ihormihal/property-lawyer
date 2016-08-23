@@ -1,0 +1,136 @@
+.header-form {
+	input[type=text] {
+		border: none;
+		height: 52px;
+	}
+}
+.icon-item {
+	text-align: center;
+	.icon {
+		font-size: 40px;
+		color: color(corp);
+	}
+	.icon-text {
+		margin-top: 15px;
+	}
+}
+.risks .icon-text {text-transform: uppercase;}
+
+.problem {
+	margin-bottom: $gap;
+	.icon {
+		font-size: 40px;
+		color: color(corp);
+	}
+	.col-sm-2 {
+		text-align: center;
+	}
+}
+.why {
+	max-height: 640px;
+	overflow: hidden;
+}
+.attainments {
+	.icon {
+		font-size: 60px;
+	}
+	.counter {
+		margin-top: 15px;
+		font-size: 32px;
+	}
+}
+.packages {
+	
+}
+.price-table {
+	thead th {
+		border: none;
+		padding: 0;
+		border: none;
+		position: relative;
+		height: 200px;
+		.title {
+			position: absolute;
+			bottom: 64px;
+			left: 0;
+			right: 0;
+			padding: 16px 8px;
+			text-align: center;
+			font-size: 20px;
+			color: #eee;
+			@include border-radius(5px 5px 0 0);
+		}
+		.price {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			font-size: 32px;
+			color: #fff;
+			padding: $gap;
+			white-space: nowrap;
+		}
+		&.package-1 {
+			.title {
+				border: 1px solid color(green);
+				color: color(green);
+			}
+			.price {
+				background-color: color(green);
+			}
+		}
+		&.package-2 {
+			.title {
+				border: 1px solid color(blue);
+				color: color(blue);
+			}
+			.price {
+				background-color: color(blue);
+			}
+		}
+		&.package-3 {
+			.title {
+				border: 1px solid color(purple);
+				color: color(purple);
+			}
+			.price {
+				background-color: color(purple);
+			}
+		}
+	}
+	tbody td {
+		padding: $gap;
+		text-align: center;
+		vertical-align: middle;
+		border-left-width: 0;
+		border-right-width: 0;
+		&:first-child {
+			text-align: left;
+			border-right-width: 1px;
+		}
+		&:nth-child(2) {
+    		box-shadow: inset -7px 0 9px -7px rgba(0,0,0,0.3)
+    	}
+    	&:nth-child(3) {
+    		background-color: #fff;
+    	}
+		&:nth-child(4) {
+    		box-shadow: inset 7px 0 9px -7px rgba(0,0,0,0.3);
+    	}
+    	.fa-check {
+    		color: color(green);
+    		font-size: 20px;
+    	}
+    	.fa-minus {
+    		color: color(grey);
+    	}
+	}
+	tr.head td {
+		font-size: 16px;
+		color: color(darken);
+	}
+}
+
+.map {
+	height: 410px;
+}
