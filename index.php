@@ -38,8 +38,8 @@
 				<?php include 'components/risks.php'; ?>
 				<?php include 'components/problems.php'; ?>
 				<?php include 'components/why.php'; ?>
-				<?php include 'components/attainments.php'; ?>
 				<?php include 'components/video.php'; ?>
+				<?php include 'components/attainments.php'; ?>
 				<?php include 'components/recommendations.php'; ?>
 				<?php include 'components/steps.php'; ?>
 				<?php include 'components/packages.php'; ?>
@@ -52,12 +52,12 @@
 			<div id="callback" class="hidden">
 				<div class="p2">
 					<h4 class="text-center mb2">Заказать звонок</h4>
-					<form action="">
+					<form action="server/email.php">
 						<div class="form-group">
-							<input type="text" class="full lg" placeholder="Имя">
+							<input type="text" name="name" class="full lg" placeholder="Имя *" required>
 						</div>
 						<div class="form-group">
-							<input type="text" class="full lg" placeholder="Телефон">
+							<input type="text" name="phone" class="full lg" placeholder="Телефон *" required>
 						</div>
 						<div class="buttons">
 							<input type="submit" class="btn btn-lg btn-danger up full" value="Заказать звонок">
@@ -69,19 +69,19 @@
 			<div id="order-package" class="hidden">
 				<div class="p2">
 					<h4 class="text-center mb2">Заказать проверку</h4>
-					<form action="">
+					<form action="server/email.php">
 						<div class="form-group">
-							<select id="package-select" class="full lg">
+							<select id="package-select" name="package" class="full lg">
 								<option value="package-1">Проверка (2800 грн)</option>
 								<option value="package-2">Проверка + сопровождение (5000 грн)</option>
 								<option value="package-3">Проверка + сопровождение + выезд на сделку (13000 грн)</option>
 							</select>
 						</div>
 						<div class="form-group">
-							<input type="text" class="full lg" placeholder="Имя">
+							<input type="text" name="name" class="full lg" placeholder="Имя *" required>
 						</div>
 						<div class="form-group">
-							<input type="text" class="full lg" placeholder="Телефон">
+							<input type="text" name="phone" class="full lg" placeholder="Телефон *" required>
 						</div>
 						<div class="buttons">
 							<input type="submit" class="btn btn-lg btn-danger up full" value="Заказать проверку">
@@ -89,5 +89,34 @@
 					</form>
 				</div>
 			</div>
+
+			<?php if(!empty($_GET['success'])): ?>
+				<script>
+					var box = '<div class="box"><h2>Спасибо за заявку!</h2><h3>Иы свяжемся с Вами в ближайшее время.</h3></div>';
+					$(function() {
+
+						$.fancybox.open({
+							type: 'html',
+							content: box,
+							fitToView: true,
+							autoSize: true,
+							width: 'false',
+							height: 'false',
+							padding: 0,
+							helpers     : {
+								overlay : {
+									opacity : 0.4,
+									locked: true
+								}
+							},
+							afterClose: function(){
+								window.location.href = '<?php echo "http://".$_SERVER['HTTP_HOST']; ?>';
+							}
+						});
+
+					})
+				</script>
+			<?php endif ?>
+
 		</body>
 </html>

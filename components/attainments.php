@@ -1,4 +1,4 @@
-<section class="attainments lighten-bg pt4 pb4">
+<section class="attainments shadow-inset pt4 pb4 parallax" data-speed="0.5" data-image="design/images/attainments-bg.jpg">
 	<div class="container">
 		<div class="text-center mb2"><h2>Мои достижения</h2></div>
 		<div class="row">

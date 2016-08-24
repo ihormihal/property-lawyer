@@ -3,16 +3,16 @@
 		<table id="prices" class="price-table striped">
 			<thead>
 				<tr>
-					<th width="55%"></th>
-					<th width="15%" class="package-1">
+					<th width="40%"></th>
+					<th width="20%" class="package-1">
 						<div class="title">Проверка</div>
 						<div class="price">2800 грн</div>
 					</th>
-					<th width="15%" class="package-2">
+					<th width="20%" class="package-2">
 						<div class="title">Проверка + сопровождение</div>
 						<div class="price">5000 грн</div>
 					</th>
-					<th width="15%" class="package-3">
+					<th width="20%" class="package-3">
 						<div class="title">Проверка + сопровождение + выезд на сделку</div>
 						<div class="price">13000 грн</div>
 					</th>

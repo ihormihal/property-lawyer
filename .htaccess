@@ -1,1 +1,3 @@
 AddDefaultCharset utf-8
+
+RewriteRule ^thank-you.html$ ?success=$1 [L,QSA]

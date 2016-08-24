@@ -3,9 +3,9 @@
 		<div class="row condensed">
 			<div class="col-md-6">
 				<div class="map single"
-					data-lat="50.000"
-					data-lng="35.000"
-					data-zoom="14"
+					data-lat="50.4569487"
+					data-lng="30.4897853"
+					data-zoom="15"
 					data-marker="design/img/pin.png">
 				</div>
 			</div>

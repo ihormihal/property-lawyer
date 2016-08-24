@@ -1,5 +1,7 @@
 body {
 	background-image: url(../img/body-bg.png);
+	width: 100%;
+	overflow-x: hidden;
 }
 
 .header-form {
@@ -54,10 +56,13 @@ body {
 		font-size: 32px;
 	}
 }
-.steps {
-	color: #fff;
+.steps, .attainments {
+	&, .icon {color: #fff;}
 	h2, .icon-text {
 		text-shadow: 0 0 2px color(corp);
+	}
+	.counter {
+		color: color(yellow);
 	}
 }
 .packages {
@@ -79,6 +84,7 @@ body {
 			text-align: center;
 			font-size: 20px;
 			color: #eee;
+			background-color: #fff;
 			@include border-radius(5px 5px 0 0);
 		}
 		.price {
@@ -93,6 +99,15 @@ body {
 		}
 		&.package-1 {
 			.title {
+				border: 1px solid color(teal);
+				color: color(teal);
+			}
+			.price {
+				background-color: color(teal);
+			}
+		}
+		&.package-2 {
+			.title {
 				border: 1px solid color(green);
 				color: color(green);
 			}
@@ -100,22 +115,13 @@ body {
 				background-color: color(green);
 			}
 		}
-		&.package-2 {
-			.title {
-				border: 1px solid color(blue);
-				color: color(blue);
-			}
-			.price {
-				background-color: color(blue);
-			}
-		}
 		&.package-3 {
 			.title {
-				border: 1px solid color(purple);
-				color: color(purple);
+				border: 1px solid color(deep-purple);
+				color: color(deep-purple);
 			}
 			.price {
-				background-color: color(purple);
+				background-color: color(deep-purple);
 			}
 		}
 	}
@@ -154,6 +160,12 @@ body {
 
 .map {
 	height: 460px;
+}
+
+@media screen and (max-width: #{$lg - 1}px) {
+	.map {
+		height: 500px;
+	}
 }
 
 @media screen and (max-width: #{$md - 1}px) {
