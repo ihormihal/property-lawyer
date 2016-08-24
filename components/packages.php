@@ -129,9 +129,9 @@
 				</tr>
 				<tr>
 					<td></td>
-					<td><a href="#popup" class="fancybox btn btn-danger">Заказать проверку</a></td>
-					<td><a href="#popup" class="fancybox btn btn-danger">Заказать проверку</a></td>
-					<td><a href="#popup" class="fancybox btn btn-danger">Заказать проверку</a></td>
+					<td><a href="#package-1" class="order-popup btn btn-danger">Заказать проверку</a></td>
+					<td><a href="#package-2" class="order-popup btn btn-danger">Заказать проверку</a></td>
+					<td><a href="#package-3" class="order-popup btn btn-danger">Заказать проверку</a></td>
 				</tr>
 			</tbody>
 		</table>

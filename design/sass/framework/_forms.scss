@@ -80,6 +80,9 @@ select, .select, input[type=text], input[type=email], input[type=password], inpu
 	&:focus + .under {
 		width: 100%;
 	}
+	&.lg {
+		height: 52px;
+	}
 }
 select, .select {
 	background-image: url(../img/ico-select.svg);

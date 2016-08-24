@@ -55,16 +55,44 @@ $(document).on('click', '.popup-img', function() {
 	});
 });
 
-//for jQuery dataTable
-$(document).on('click', 'tr.clickable', function() {
-    window.document.location = $(this).attr('data-href');
+
+$(document).on('click', '.order-popup', function(e) {
+	e.preventDefault();
+	var package = $(this).attr('href').replace('#','');
+	$('#package-select').val(package);
+    $.fancybox.open({
+		href: '#order-package',
+		fitToView: true,
+		autoSize: true,
+		width: false,
+		height: false,
+		padding: 0,
+		wrapCSS: 'popup',
+		closeBtn: true,
+		helpers     : {
+			overlay : {
+				opacity : 0.4,
+				locked: true
+			}
+		}
+	});
 });
 
 $(function() {
 
-	$('.floating-label').each(function(){
-		if($(this).find('input, textarea').val() !== ''){
-			$(this).addClass('focus');
+	$('.fancybox').fancybox({
+		fitToView: true,
+		autoSize: true,
+		width: false,
+		height: false,
+		padding: 0,
+		wrapCSS: 'popup',
+		closeBtn: true,
+		helpers     : {
+			overlay : {
+				opacity : 0.4,
+				locked: true
+			}
 		}
 	});
 

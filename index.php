@@ -46,5 +46,46 @@
 			<footer>
 				<?php include 'components/footer.php'; ?>
 			</footer>
+
+			<div id="callback" class="hidden">
+				<div class="p2">
+					<h4 class="text-center mb2">Заказать звонок</h4>
+					<form action="">
+						<div class="form-group">
+							<input type="text" class="full lg" placeholder="Имя">
+						</div>
+						<div class="form-group">
+							<input type="text" class="full lg" placeholder="Телефон">
+						</div>
+						<div class="buttons">
+							<input type="submit" class="btn btn-lg btn-danger up full" value="Заказать звонок">
+						</div>    
+					</form>
+				</div>
+			</div>
+
+			<div id="order-package" class="hidden">
+				<div class="p2">
+					<h4 class="text-center mb2">Заказать проверку</h4>
+					<form action="">
+						<div class="form-group">
+							<select id="package-select" class="full lg">
+								<option value="package-1">Проверка (2800 грн)</option>
+								<option value="package-2">Проверка + сопровождение (5000 грн)</option>
+								<option value="package-3">Проверка + сопровождение + выезд на сделку (13000 грн)</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<input type="text" class="full lg" placeholder="Имя">
+						</div>
+						<div class="form-group">
+							<input type="text" class="full lg" placeholder="Телефон">
+						</div>
+						<div class="buttons">
+							<input type="submit" class="btn btn-lg btn-danger up full" value="Заказать проверку">
+						</div>    
+					</form>
+				</div>
+			</div>
 		</body>
 </html>
