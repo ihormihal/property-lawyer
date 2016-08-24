@@ -12,7 +12,7 @@
 					</div>
 					<div class="container">
 						<div class="mb4 wow fadeInDown">
-							<h1 class="bold dark">АДВОКАТ ПО НЕДВИЖИМОСТИ</h1>
+							<h1 class="bold dark up">Адвокат по недвижимости</h1>
 							<h4 class="bold dark">(юридическая проверка квартир, домов, нежилых помещений, земельных участков перед покупкой/продажей)</h4>
 						</div>
 						<div class="row">

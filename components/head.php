@@ -2,7 +2,7 @@
 <link rel="canonical" href="/">
 <meta http-equiv="Content-Type" content="text/html; charset=utf8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-<title>www.property-lawyer.com.ua</title>
+<title>Адвокат по недвижимости "Лежух і партнери"</title>
 <!-- Plugins CSS -->
 <link href="design/plugins/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
 <link href="design/plugins/fancybox/css/jquery.fancybox.css" rel="stylesheet">
@@ -14,7 +14,7 @@
 <link href="design/css/framework.css" type="text/css" rel="stylesheet">
 <link href="design/css/animate.css" type="text/css" rel="stylesheet">
 <!-- Plugins JS -->
-<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+<script src="http://maps.google.com/maps/api/js?key=AIzaSyA-YQC3nl2-zCwPA4QJXpuycfzYT8idOpw" type="text/javascript"></script>
 <script src="design/plugins/jquery/jquery-2.1.4.min.js" type="text/javascript"></script>
 <script src="design/plugins/fancybox/js/jquery.fancybox.pack.js" type="text/javascript"></script>
 <script src="design/plugins/wow/wow.min.js" type="text/javascript"></script>
