@@ -1,12 +1,12 @@
-<section class="why pt2 pb2">
+<section class="why white-bg">
 	<div class="container full">
 		<div class="row condensed">
-			<div class="col-md-6">
+			<div class="col-md-6 wow fadeInLeft">
 				<div class="image">
 					<img src="design/images/photo.jpg" alt="">
 				</div>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-6 wow fadeInRight">
 				<div class="p4">
 					<h3 class="mb2 mt4">Для чего нужна проверка недвижимости перед покупкой и почему необходимо обращаться за помощью именно к нам?</h3>
 					<p class="h4">Наверное у каждого есть мечта – построить либо купить свой собственный уголок и построить в дальнейшем в нем счастливую жизнь. За последний год количество сделок с недвижимостью – существенно возросло, но количество дел, рассматриваемых в судах по этому направлению  - только увеличилось.</p>

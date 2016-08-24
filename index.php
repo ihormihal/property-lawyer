@@ -11,26 +11,28 @@
 						<?php include 'components/header.php'; ?>
 					</div>
 					<div class="container">
-						<div class="mb4">
-							<h1>АДВОКАТ ПО НЕДВИЖИМОСТИ</h1>
-							<h4>(юридическая проверка квартир, домов, нежилых помещений, земельных участков перед покупкой/продажей)</h4>
+						<div class="mb4 wow fadeInDown">
+							<h1 class="bold dark">АДВОКАТ ПО НЕДВИЖИМОСТИ</h1>
+							<h4 class="bold dark">(юридическая проверка квартир, домов, нежилых помещений, земельных участков перед покупкой/продажей)</h4>
 						</div>
 						<div class="row">
 							<div class="col-md-8">
-								<h2 class="mb2">Вам обеспечивается:</h2>
-								<ul class="list">
-									<li><i class="fa fa-check"></i> полная юридическая проверка продавца недвижимости</li>
-									<li><i class="fa fa-check"></i> профессиональный анализ алгоритма отчуждения объекта недвижимости</li>
-									<li><i class="fa fa-check"></i> полная юридическая проверка объекта недвижимости</li>
-									<li><i class="fa fa-check"></i> при необходимости, разработка наиболее выгодной модели проведения сделки</li>
-								</ul>
+								<div class="garanties box rounded-5 wow fadeIn">
+									<h2 class="mb2">Вам обеспечивается:</h2>
+									<ul class="list">
+										<li><i class="fa fa-check"></i> полная юридическая проверка продавца недвижимости</li>
+										<li><i class="fa fa-check"></i> профессиональный анализ алгоритма отчуждения объекта недвижимости</li>
+										<li><i class="fa fa-check"></i> полная юридическая проверка объекта недвижимости</li>
+										<li><i class="fa fa-check"></i> при необходимости, разработка наиболее выгодной модели проведения сделки</li>
+									</ul>
+								</div>
 							</div>
 							<div class="col-md-4">
 								<?php include 'components/form.php'; ?>
 							</div>
 						</div>
 					</div>
-					
+
 				</section>
 
 				<?php include 'components/risks.php'; ?>
@@ -59,7 +61,7 @@
 						</div>
 						<div class="buttons">
 							<input type="submit" class="btn btn-lg btn-danger up full" value="Заказать звонок">
-						</div>    
+						</div>
 					</form>
 				</div>
 			</div>
@@ -83,7 +85,7 @@
 						</div>
 						<div class="buttons">
 							<input type="submit" class="btn btn-lg btn-danger up full" value="Заказать проверку">
-						</div>    
+						</div>
 					</form>
 				</div>
 			</div>

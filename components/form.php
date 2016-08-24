@@ -1,4 +1,4 @@
-<div class="header-form green-bg box rounded-5">
+<div class="header-form green-bg box rounded-5 wow fadeIn">
 	<form action="">
 		<div class="form-group">
 			<input type="text" class="full lg" placeholder="Имя">
@@ -8,6 +8,6 @@
 		</div>
 		<div class="buttons">
 			<input type="submit" class="btn btn-lg btn-danger up full" value="Заказать проверку">
-		</div>    
+		</div>
 	</form>
 </div>

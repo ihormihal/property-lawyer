@@ -1,4 +1,4 @@
-<section class="recommendations pt4 pb4">
+<section class="steps white-bg pt4 pb4 cover" style="background-image: url(design/images/law-bg.jpg)">
 	<div class="container">
 		<div class="text-center mb2"><h2>Этапы предоставления услуг</h2></div>
 		<div class="row">

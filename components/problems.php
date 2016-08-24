@@ -2,36 +2,7 @@
 	<div class="container">
 		<h2 class="text-center mb4">14 проблем, которые могут возникнуть при покупке недвижимости</h2>
 		<div class="row">
-			<div class="col-md-6">
-				<div class="problem">
-					<div class="row">
-						<div class="col-sm-2">
-							<span class="icon lnr lnr-license"></span>
-						</div>
-						<div class="col-sm-10">
-							<h3 class="mb2">ОТСУТСТВИЕ НАДЛЕЖАЩИХ РАЗРЕШЕНИЙ</h3>
-							<p>Отсутствие у застройщика необходимых разрешений и лицензий для законного ведения строительства является основанием для остановки строительства и делает невозможным введение объекта в эксплуатацию.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="problem">
-					<div class="row">
-						<div class="col-sm-2">
-							<span class="icon lnr lnr-construction"></span>
-						</div>
-						<div class="col-sm-10">
-							<h3 class="mb2">ОТСУТСТВИЕ НУЖНЫХ ТЕХНИЧЕСКИХ УСЛОВИЙ</h3>
-							<p>Для успешного введения в эксплуатацию дом должен соответствовать установленным законом нормам и иметь подключение всех коммуникационных систем, согласно проекту.Отсутствие у застройщика должным образом оформленных технических условий для подключения коммуникаций может вызвать проблемы с введением дома в эксплуатацию.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="clear"></div>
-
-			<div class="col-md-6">
+			<div class="col-md-6 wow fadeInLeft">
 				<div class="problem">
 					<div class="row">
 						<div class="col-sm-2">
@@ -44,7 +15,38 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-6 wow fadeInRight">
+				<div class="problem">
+					<div class="row">
+						<div class="col-sm-2">
+							<span class="icon lnr lnr-sad"></span>
+						</div>
+						<div class="col-sm-10">
+							<h3 class="mb2">АРЕСТЫ</h3>
+							<p>В связи с нарушением законодательства в сфере строительства на объект может быть наложен арест, который фактически делает невозможным его законную продажу.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="clear"></div>
+
+
+			<div class="col-md-6 wow fadeInLeft">
+				<div class="problem">
+					<div class="row">
+						<div class="col-sm-2">
+							<span class="icon lnr lnr-license"></span>
+						</div>
+						<div class="col-sm-10">
+							<h3 class="mb2">ОТСУТСТВИЕ НАДЛЕЖАЩИХ РАЗРЕШЕНИЙ</h3>
+							<p>Отсутствие у застройщика необходимых разрешений и лицензий для законного ведения строительства является основанием для остановки строительства и делает невозможным введение объекта в эксплуатацию.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 wow fadeInRight">
 				<div class="problem">
 					<div class="row">
 						<div class="col-sm-2">
@@ -60,20 +62,21 @@
 
 			<div class="clear"></div>
 
-			<div class="col-md-6">
+			<div class="col-md-6 wow fadeInLeft">
 				<div class="problem">
 					<div class="row">
 						<div class="col-sm-2">
-							<span class="icon lnr lnr-sad"></span>
+							<span class="icon lnr lnr-construction"></span>
 						</div>
 						<div class="col-sm-10">
-							<h3 class="mb2">АРЕСТЫ</h3>
-							<p>В связи с нарушением законодательства в сфере строительства на объект может быть наложен арест, который фактически делает невозможным его законную продажу.</p>
+							<h3 class="mb2">ОТСУТСТВИЕ НУЖНЫХ ТЕХНИЧЕСКИХ УСЛОВИЙ</h3>
+							<p>Для успешного введения в эксплуатацию дом должен соответствовать установленным законом нормам и иметь подключение всех коммуникационных систем, согласно проекту.Отсутствие у застройщика должным образом оформленных технических условий для подключения коммуникаций может вызвать проблемы с введением дома в эксплуатацию.</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6">
+
+			<div class="col-md-6 wow fadeInRight">
 				<div class="problem">
 					<div class="row">
 						<div class="col-sm-2">
@@ -89,7 +92,7 @@
 
 			<div class="clear"></div>
 
-			<div class="col-md-6">
+			<div class="col-md-6 wow fadeInLeft">
 				<div class="problem">
 					<div class="row">
 						<div class="col-sm-2">
@@ -102,7 +105,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-6 wow fadeInRight">
 				<div class="problem">
 					<div class="row">
 						<div class="col-sm-2">
@@ -118,7 +121,7 @@
 
 			<div class="clear"></div>
 
-			<div class="col-md-6">
+			<div class="col-md-6 wow fadeInLeft">
 				<div class="problem">
 					<div class="row">
 						<div class="col-sm-2">
@@ -131,7 +134,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-6 wow fadeInRight">
 				<div class="problem">
 					<div class="row">
 						<div class="col-sm-2">
@@ -147,7 +150,7 @@
 
 			<div class="clear"></div>
 
-			<div class="col-md-6">
+			<div class="col-md-6 wow fadeInLeft">
 				<div class="problem">
 					<div class="row">
 						<div class="col-sm-2">
@@ -160,7 +163,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-6 wow fadeInRight">
 				<div class="problem">
 					<div class="row">
 						<div class="col-sm-2">
@@ -175,8 +178,8 @@
 			</div>
 
 			<div class="clear"></div>
-			
-			<div class="col-md-6">
+
+			<div class="col-md-6 wow fadeInLeft">
 				<div class="problem">
 					<div class="row">
 						<div class="col-sm-2">
@@ -189,14 +192,14 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-6 wow fadeInRight">
 				<div class="problem">
 					<div class="row">
 						<div class="col-sm-2">
 							<span class="icon lnr lnr-apartment"></span>
 						</div>
 						<div class="col-sm-10">
-							<h3 class="mb2">«НЕДОСТРОЙ»</h3>
+							<h3 class="mb2">"НЕДОСТРОЙ"</h3>
 							<p>Количество проблемных строительств сомнительных компаний в Украине составляет более 2 тысяч, поэтому необходимой и важной становится комплексная задача проверить застройщика. Киев - в эпицентре этой проблемы!</p>
 						</div>
 					</div>

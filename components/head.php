@@ -17,7 +17,8 @@
 <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
 <script src="design/plugins/jquery/jquery-2.1.4.min.js" type="text/javascript"></script>
 <script src="design/plugins/fancybox/js/jquery.fancybox.pack.js" type="text/javascript"></script>
-<script src="design/plugins/owl/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="design/plugins/wow/wow.min.js" type="text/javascript"></script>
+<script src="design/plugins/countUp/countUp.min.js" type="text/javascript"></script>
 
 <!-- Framework JS -->
 <script src="design/js/framework/owl.js" type="text/javascript"></script>

@@ -1,5 +1,5 @@
 <section class="packages lighten-bg pt4 pb4">
-	<div class="container">
+	<div class="container table-responsive">
 		<table id="prices" class="price-table striped">
 			<thead>
 				<tr>

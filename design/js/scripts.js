@@ -1,30 +1,15 @@
 var cssTransitionEnd = 'transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd';
 
-//Языковые настройки DataTables
-var dataTablesLng = {
-	"emptyTable":     "Нет данных",
-	"info":           "Показано _START_ - _END_ из _TOTAL_",
-	"infoEmpty":      "Showing 0 to 0 of 0 entries",
-	"infoFiltered":   "(filtered from _MAX_ total entries)",
-	"infoPostFix":    "",
-	"thousands":      ",",
-	"lengthMenu":     "_MENU_",
-	"loadingRecords": "Загрузка...",
-	"processing":     "Обработка...",
-	"search":         "Поиск: ",
-	"zeroRecords":    "По данному запросу записей не найдено",
-	"paginate": {
-	  "first":      "Первая",
-	  "last":       "Последняя",
-	  "next":       "<i class='fa fa-angle-right'></i>",
-	  "previous":   "<i class='fa fa-angle-left'></i>"
-	},
-	"aria": {
-	  "sortAscending":  ": activate to sort column ascending",
-	  "sortDescending": ": activate to sort column descending"
-	}
-};
-var dataTablesDom = '<"table-top">t<"row"<"col-xs-6"p><"col-xs-6 text-right"l>><"clear">';
+var Wow = new WOW({
+	boxClass: 'wow', // default
+	animateClass: 'animated', // default
+	offset: 0, // default
+	mobile: true, // default
+	live: true // default
+});
+
+Wow.init();
+
 
 //window resize
 $(window).on('resize', function(){
@@ -94,6 +79,11 @@ $(function() {
 				locked: true
 			}
 		}
+	});
+
+	$('.counter > span').each(function(){
+		var endVal = parseInt($(this).text());
+		new CountUp(this,0,endVal,0,3).start();
 	});
 
 	//Google map
